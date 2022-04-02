@@ -7,10 +7,7 @@ export const fetchUsers = () => {
         try {
             dispatch({type: UserActionTypes.FATCH_USERS})
             const response = await axios.get("https://jsonplaceholder.typicode.com/users")
-            setTimeout(()=>{
-
                 dispatch({type:UserActionTypes.FATCH_USERS_SUCCSESS,payload:response.data})
-            },500)
         } catch (e) {
             dispatch({
                 type: UserActionTypes.FATCH_USERS_ERROR,

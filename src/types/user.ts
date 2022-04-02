@@ -24,4 +24,21 @@ interface FetchUserErrorAction {
     payload: string;
 }
 
+export interface IAddress {
+    city: string;
+    street: string;
+    suite: string;
+    zipcode: string;
+}
+
+export interface IUser {
+    id:number;
+    name:string;
+    email:string;
+    phone: string;
+    username: string;
+    website: string;
+    address:IAddress
+}
+
 export type UserAction = UserActionFetchTypes | FetchUserSuccsessAction | FetchUserErrorAction
